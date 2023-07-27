@@ -1,0 +1,53 @@
+<!-- 
+    伪对象方式：
+    如果父级塌陷，并且同级元素也受到影响，可以使用伪对象方式处理；
+    为父标签添加伪类after，设置空的内容，并且使用clear：both
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text {
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            clear: both;
+        }
+
+        .container {
+            width: 500px;
+            background: #888
+        }
+
+        .container::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            margin: 5px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="text"></div>
+    </div>
+    <!-- <div class="text"></div> -->
+</body>
+
+</html>

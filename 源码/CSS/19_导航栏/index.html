@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li a,
+        .dropbtn {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 14px 16px;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a:hover,
+        .Dropdown:hover .dropbtn{
+            background-color: red;
+        }
+
+        .Dropdown {
+            display: inline-block;
+        }
+
+        .Dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .Dropdown-content a {
+            color: black;
+            display: block;
+        }
+
+        .Dropdown-content a:hover {background-color: #f1f1f1;}
+        .Dropdown:hover .Dropdown-content{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li class="Dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+            <div class="Dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+
+        </li>
+
+    </ul>
+    <h1>导航栏内的下拉菜单</h1>
+
+    <p>请悬停到 "Dropdown" 链接上，以查看下拉菜单。</p>
+</body>
+
+</html>

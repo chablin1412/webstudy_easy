@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 500px;
+            height: 100px;
+            background: #888
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            margin-right: 5px;
+            float: left;
+        }
+
+        .text {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            clear: both
+                /* both/right/left */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>如图高度一致的效果，需要使小盒子左右排列且与父级高度一致</p>
+        <img src="height.webp" alt="">
+        <ol>实现步骤如下：
+            <li>删除父级高度</li>
+            <li>小盒子增加浮动</li>
+        </ol>
+        <p>结果：父级塌陷,后续元素text也受到影响</p>
+        <ul>
+            <li>解决方案：</li>
+            <li>给父级元素设置高度;</li>
+            <li>受影响元素添加clear属性;</li>
+            <li>实际开发中未必可以设置静态高度，详见overflow.html</li>
+    </div>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="text"></div>
+        <!-- 情况1 -->
+    </div>
+    <!-- <div class="text"></div> -->
+    <!-- 情况2（不同时出现） -->
+</body>
+
+</html>
